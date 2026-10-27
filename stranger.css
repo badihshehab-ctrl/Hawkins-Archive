@@ -1,0 +1,564 @@
+/* =========================
+   GENERAL SETTINGS
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    background-color: #080808;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+
+/* =========================
+   NAVIGATION BAR
+========================= */
+
+.header {
+    width: 100%;
+    padding: 22px 8%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: #050505;
+    border-bottom: 1px solid #301010;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    color: #e50914;
+    font-size: 23px;
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: 2px;
+
+    text-shadow: 0 0 10px #e50914;
+}
+
+.navbar {
+    display: flex;
+    gap: 25px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #e50914;
+}
+
+
+/* =========================
+   HOME / HERO SECTION
+========================= */
+
+.hero {
+    min-height: 85vh;
+    padding: 60px 8%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.95)
+        ),
+        radial-gradient(
+            circle at center,
+            #650b10,
+            #190507 55%,
+            #050505
+        );
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero h1 {
+    color: #e50914;
+
+    font-size: clamp(32px, 5vw, 60px);
+
+    margin-bottom: 25px;
+
+    text-shadow:
+        0 0 10px #e50914,
+        0 0 25px #8b0000;
+}
+
+.hero p {
+    color: #d0d0d0;
+
+    font-size: 18px;
+    line-height: 1.8;
+
+    margin-bottom: 35px;
+}
+
+
+/* Hero Button */
+
+.hero-button {
+    display: inline-block;
+
+    padding: 15px 30px;
+
+    background-color: #e50914;
+    color: white;
+
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    border: 1px solid #e50914;
+
+    transition:
+        background-color 0.3s ease,
+        box-shadow 0.3s ease,
+        transform 0.3s ease;
+}
+
+.hero-button:hover {
+    background-color: transparent;
+
+    box-shadow: 0 0 20px #e50914;
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   SHARED SECTION HEADINGS
+========================= */
+
+.section-heading {
+    color: #e50914;
+
+    text-align: center;
+
+    font-size: 32px;
+    letter-spacing: 3px;
+
+    margin-bottom: 20px;
+
+    text-shadow: 0 0 12px rgba(229, 9, 20, 0.5);
+}
+
+.section-description {
+    color: #aaa;
+
+    text-align: center;
+
+    margin-bottom: 45px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================
+   CHARACTERS SECTION
+========================= */
+
+.characters-section {
+    padding: 80px 8%;
+    background-color: #0b0b0b;
+}
+
+
+/* Characters Grid */
+
+.characters-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    gap: 25px;
+}
+
+
+/* Character Cards */
+
+.character-card {
+    background-color: #141414;
+
+    border: 1px solid #292020;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.character-card:hover {
+    transform: translateY(-8px);
+
+    border-color: #e50914;
+
+    box-shadow: 0 0 20px rgba(229, 9, 20, 0.25);
+}
+
+
+/* Character Images */
+
+.character-card img {
+    display: block;
+
+    width: 100%;
+    height: 280px;
+
+    object-fit: cover;
+
+    transition: transform 0.4s ease;
+}
+
+.character-card:hover img {
+    transform: scale(1.04);
+}
+
+
+/* Character Information */
+
+.character-info {
+    padding: 20px;
+}
+
+.character-info h3 {
+    color: #e50914;
+
+    font-size: 19px;
+
+    margin-bottom: 12px;
+}
+
+.character-info p {
+    color: #bbb;
+
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* =========================
+   SEASONS SECTION
+========================= */
+
+.seasons-section {
+    padding: 80px 8%;
+    background-color: #0b0b0b;
+
+    border-top: 1px solid #251010;
+}
+
+
+/* Seasons Grid */
+
+.seasons-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 25px;
+
+    margin-top: 45px;
+}
+
+
+/* Season Cards */
+
+.season-card {
+    background-color: #141414;
+
+    border: 1px solid #292020;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.season-card:hover {
+    transform: translateY(-8px);
+
+    border-color: #e50914;
+
+    box-shadow: 0 0 20px rgba(229, 9, 20, 0.25);
+}
+
+
+/* Season Images */
+
+.season-card img {
+    display: block;
+
+    width: 100%;
+    height: 230px;
+
+    object-fit: contain;
+
+    transition: transform 0.4s ease;
+}
+
+.season-card:hover img {
+    transform: scale(1.04);
+}
+
+
+/* Season Information */
+
+.season-info {
+    padding: 22px;
+}
+
+.season-number {
+    display: inline-block;
+
+    color: #e50914;
+
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+
+    margin-bottom: 12px;
+}
+
+.season-info h3 {
+    font-size: 21px;
+
+    margin-bottom: 8px;
+}
+
+.season-year {
+    color: #e50914;
+
+    font-size: 14px;
+
+    margin-bottom: 15px;
+}
+
+.season-info p:not(.season-year) {
+    color: #bbb;
+
+    font-size: 14px;
+    line-height: 1.8;
+
+    margin-bottom: 10px;
+}
+
+
+/* =========================
+   ABOUT SECTION
+========================= */
+
+.about-section {
+    padding: 80px 10%;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.92),
+            rgba(20, 0, 0, 0.96)
+        );
+
+    border-top: 1px solid #301010;
+}
+
+.about-content {
+    max-width: 850px;
+
+    margin: 35px auto 0;
+}
+
+.about-content p {
+    color: #bbb;
+
+    font-size: 16px;
+    line-height: 1.9;
+
+    margin-bottom: 22px;
+
+    text-align: center;
+}
+
+.about-content .about-disclaimer {
+    color: #666;
+
+    font-size: 12px;
+
+    margin-top: 40px;
+    margin-bottom: 0;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #292020;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    padding: 25px;
+
+    text-align: center;
+
+    background-color: #050505;
+
+    border-top: 1px solid #301010;
+}
+
+.footer p {
+    color: #777;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+   TABLETS
+========================= */
+
+@media (max-width: 1000px) {
+
+    /* Header */
+
+    .header {
+        padding: 20px 5%;
+    }
+
+
+    /* Characters */
+
+    .characters-section {
+        padding: 65px 5%;
+    }
+
+    .characters-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+
+    /* Seasons */
+
+    .seasons-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+   PHONES
+========================= */
+
+@media (max-width: 600px) {
+
+    /* Header */
+
+    .header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .navbar {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .navbar a {
+        font-size: 13px;
+    }
+
+
+    /* Hero */
+
+    .hero {
+        min-height: 75vh;
+        padding: 50px 6%;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+
+    /* Shared Headings */
+
+    .section-heading {
+        font-size: 25px;
+        letter-spacing: 2px;
+    }
+
+
+    /* Characters */
+
+    .characters-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .character-card img {
+        height: 320px;
+    }
+
+
+    /* Seasons */
+
+    .seasons-section {
+        padding: 60px 6%;
+    }
+
+    .seasons-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .season-card img {
+        height: 260px;
+    }
+
+
+    /* About */
+
+    .about-section {
+        padding: 60px 6%;
+    }
+
+    .about-content p {
+        font-size: 14px;
+    }
+
+}
